@@ -1,5 +1,5 @@
 module.exports = {
   index(req, res, next) {
-    res.render("drag/index");
+    res.render("talents/drag/index");
   }
 }
