@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
   <% include ../static/partials/head.ejs %>
-  </head>
-  <body>
+</head>
 
-      <!-- Navigation -->
-      <% include ../static/partials/navbar.ejs %>
-      <h2>What is your talent?</h2>
+<body>
 
-  <% talents.forEach((talent) => {
-    <% talent.title %>
-  }) %>
+  <!-- Navigation -->
+  <% include ../static/partials/navbar.ejs %>
+    <h2>What is your talent?</h2>
 
-       <% include ../static/partials/baseScripts.ejs %>
-    </body>
+  
+
+        <% include ../static/partials/baseScripts.ejs %>
+</body>
+
 </html>

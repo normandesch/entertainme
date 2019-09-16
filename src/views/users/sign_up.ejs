@@ -1,17 +1,56 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <% include ../static/partials/head.ejs %>
-  </head>
-  <body>
 
-    <% include ../static/partials/navbar.ejs %>
+<head>
+  <% include ../static/partials/head.ejs %>
+</head>
+
+<body>
+
+  <% include ../static/partials/navbar.ejs %>
 
     <main class="container">
 
       <h1>Sign up</h1>
 
       <form action="/users" method="post">
+
+        <div class="form-group">
+          <label for="text">First Name</label>
+          <input type="text" class="form-control" name="text" aria-describedby="textHelp" placeholder="Enter text">
+          <small class="text-muted" id="textHelp">please write your full legal first name</small>
+        </div>
+
+        <div class="form-group">
+          <label for="text">Last Name</label>
+          <input type="text" class="form-control" name="text" aria-describedby="textHelp" placeholder="Enter text">
+          <small class="text-muted" id="textHelp">please write your full legal last name</small>
+        </div>
+
+        <div class="form-group">
+          <label for="text">Talent</label>
+          <select>
+            <option value="Circus">Circus</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Drag">Drag</option>
+            <option value="Dance">Dance</option>
+            <option value="Magic">Magic</option>
+            <option value="Music">Music</option>
+          </select>
+          <small class="text-muted" id="textHelp">please choose your talent</small>
+        </div>
+
+        <div class="form-group">
+          <label for="text">Stage Name</label>
+          <input type="text" class="form-control" name="text" aria-describedby="textHelp" placeholder="Enter text">
+          <small class="text-muted" id="textHelp">please write your full stage name</small>
+        </div>
+
+        <div class="form-group">
+          <label for="text">Location</label>
+          <input type="text" class="form-control" name="text" aria-describedby="textHelp" placeholder="Enter text">
+          <small class="text-muted" id="textHelp">Where abouts do you reside?</small>
+        </div>
 
         <div class="form-group">
           <label for="email">Email</label>
@@ -30,7 +69,7 @@
           <input type="password" class="form-control" name="passwordConfirmation" aria-describedby="passwordHelp" placeholder="Enter password confirmation">
         </div>
 
-        <button type="submit" class="btn btn-primary">Sign up</button>
+        <button type="submit " class="btn btn-primary ">Sign up</button>
       </form>
     </main>
 

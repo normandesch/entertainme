@@ -9,15 +9,19 @@ module.exports = {
     const salt = bcrypt.genSaltSync();
     const hashedPassword = bcrypt.hashSync(newUser.password, salt);
 
-    return User.create({
-      email: newUser.email,
-      password: hashedPassword
-    })
-      .then(user => {
-        callback(null, user);
-      })
-      .catch(err => {
+      if(newUser.password.length < 6 || newUser.password !== newUser.passwordConfirmation){
         callback(err);
-      });
+      } else {
+          return User.create({
+            email: newUser.email,
+            password: hashedPassword
+          })
+            .then(user => {
+              callback(null, user);
+          })
+              .catch(err => {
+              callback(err);
+          });
+      }
     }
 };
