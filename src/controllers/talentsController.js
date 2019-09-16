@@ -1,5 +1,13 @@
+const talentQueries = require("../db/queries.talents");
+
 module.exports = {
   index(req, res, next) {
-    res.render("talents/index");
+    talentQueries.getAllTalents((err, talents) => {
+      if (err) {
+        res.redirect("/");
+      } else {
+        res.render("talents/index", {talents});
+      }
+    });
   }
-}
+};

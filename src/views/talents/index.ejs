@@ -8,12 +8,11 @@
       <!-- Navigation -->
       <% include ../static/partials/navbar.ejs %>
       <h2>What is your talent?</h2>
-<a href="/circus">Circus</a>
-<a href="/comedy">Comedy</a>
-<a href="/drag">Drag</a>
-<a href="/dance">Dance</a>
-<a href="/magic">Magic</a>
-<a href="/music">Music</a>
+
+  <%= talents.forEach((talent) => {
+    <%= talent.title %>
+    <%= talent.description %>
+  }) %>
 
        <% include ../static/partials/baseScripts.ejs %>
     </body>
