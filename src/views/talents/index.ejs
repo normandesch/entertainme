@@ -9,9 +9,8 @@
       <% include ../static/partials/navbar.ejs %>
       <h2>What is your talent?</h2>
 
-  <%= talents.forEach((talent) => {
-    <%= talent.title %>
-    <%= talent.description %>
+  <% talents.forEach((talent) => {
+    <% talent.title %>
   }) %>
 
        <% include ../static/partials/baseScripts.ejs %>

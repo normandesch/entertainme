@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../static/partials/head.ejs %>
+  </head>
+  <body>
+
+    <% include ../static/partials/navbar.ejs %>
+
+    <main class="container">
+
+
+      <h1><%= `${user.email}'s profile` %></h1>
+
+      <hr>
+
+      <h2> Latest Posts</h2>
+
+      <ul class="list-unstyled">
+
+        <% if(entertainer) { %>
+          <% entertainer.forEach((entertainer) => { %>
+            <li>
+              <a href="/talents/<%= entertainer.talentId %>/entertainers/<%= entertainer.id %>">
+                <%= entertainer.title %>
+              </a>
+            </li>
+          <% }) %>
+        <% } %>
+      </ul>
+      <hr>
+
+      <h2> Latest Entertainers</h2>
+
+      <ul class="list-unstyled">
+
+        <% if(entertainers) { %>
+          <% entertainers.forEach((entertainer) => { %>
+            <li>
+              <span>Entertainer: </span><a href="/talents/<%= comment.Entertainer.talentId %>/entertainers/<%= comment.Post.id %>">
+                <%= comment.Entertainer.title %>
+              </a>
+              <p>Comment: <%= comment.body %></p>
+            </li>
+            <hr>
+          <% }) %>
+        <% } %>
+      </ul>
+    </main>
+
+    <% include ../static/partials/baseScripts.ejs %>
+
+  </body>
+</html>
