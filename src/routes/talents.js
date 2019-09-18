@@ -5,5 +5,4 @@ const talentsController = require("../controllers/talentsController");
 
 router.get("/talents", talentsController.index);
 
-
 module.exports = router;

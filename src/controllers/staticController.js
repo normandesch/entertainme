@@ -1,8 +1,8 @@
 module.exports = {
   index(req, res, next) {
-    res.render("static/index", {title: "Welcome to EntertainMe"});
+    res.render("static/index");
   },
   about(req, res, next) {
-    res.render("static/about")
+    res.render("static/about");
   }
-}
+};

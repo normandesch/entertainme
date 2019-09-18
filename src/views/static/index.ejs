@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
   <% include ./partials/head.ejs %>
-  </head>
-  <body>
+</head>
 
-      <% include ./partials/navbar.ejs %>
+<body>
 
+  <% include ./partials/navbar.ejs %>
 
-      <main class="container">
+    <main class="container">
 
-        <header class="jumbotron my-4">
-          <h1 class="display-3">Welcome to EntertainMe</h1>
-          <p class="lead">Hire a local performer for your private event today!
-          Must be 18 or older to use EntertainMe</p>
-          <a href="/users/sign_up" class="btn btn-primary btn-lg">Sign up</a>
-        </header>
+      <header class="jumbotron my-4">
+        <h1 class="display-3">Welcome to EntertainMe</h1>
+        <p class="lead">Hire a local performer for your private event today! Must be 18 or older to use EntertainMe</p>
+        <a href="/users/sign_up" class="btn btn-primary btn-lg">Sign up</a>
+      </header>
 
-        <section class="row text-center">
+      <section class="row text-center">
 
-          <section class="col-lg-4">
-            <h4 class="card-title">Tour</h4>
-            <p class="card-text">Take a peek at local talent near you without the commitment of signing up!</p>
-          </section>
-
-          <section class="col-lg-4">
-            <h4 class="card-title">Reviews</h4>
-            <p class="card-text">There are plenty to read!</p>
-          </section>
-
-          <section class="col-lg-4">
-            <h4 class="card-title">Disclaimer</h4>
-            <p class="card-text">Disclaimer body</p>
-          </section>
-
+        <section class="col-lg-4">
+          <h4 class="card-title">Tour</h4>
+          <p class="card-text">Take a peek at local talent near you without the commitment of signing up!</p>
         </section>
 
-      </main>
+        <section class="col-lg-4">
+          <h4 class="card-title">Reviews</h4>
+          <p class="card-text">There are plenty to read!</p>
+        </section>
 
-       <% include ./partials/baseScripts.ejs %>
-    </body>
+        <section class="col-lg-4">
+          <h4 class="card-title">Disclaimer</h4>
+          <p class="card-text">Disclaimer body</p>
+        </section>
+
+      </section>
+
+    </main>
+
+    <% include ./partials/baseScripts.ejs %>
+</body>
+
 </html>

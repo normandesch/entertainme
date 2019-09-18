@@ -1,5 +1,5 @@
 module.exports = {
-  init(app){
+  init(app) {
     const staticRoutes = require("../routes/static");
     const talentsRoutes = require("../routes/talents");
     const userRoutes = require("../routes/users");
@@ -7,6 +7,5 @@ module.exports = {
     app.use(staticRoutes);
     app.use(talentsRoutes);
     app.use(userRoutes);
-
   }
-}
+};

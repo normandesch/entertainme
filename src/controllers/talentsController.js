@@ -6,7 +6,7 @@ module.exports = {
       if (err) {
         res.redirect("/");
       } else {
-        res.render("talents/index", {talents});
+        res.render("talents/index", { talents });
       }
     });
   }

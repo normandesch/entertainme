@@ -6,7 +6,7 @@ const faker = require("faker");
 //#2
 let talents = [];
 
-for(let i = 1 ; i <= 15 ; i++){
+for (let i = 1; i <= 15; i++) {
   talents.push({
     title: faker.hacker.noun(),
     description: faker.hacker.phrase(),
