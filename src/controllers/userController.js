@@ -6,6 +6,7 @@ module.exports = {
     res.render("users/sign_up");
   },
   create(req, res, next) {
+    console.log("create");
     let newUser = {
       email: req.body.email,
       password: req.body.password,
@@ -33,6 +34,7 @@ module.exports = {
   },
   signIn(req, res, next) {
     passport.authenticate("local")(req, res, function() {
+      console.log(req.user);
       if (!req.user) {
         req.flash("notice", "Sign in failed. Please try again.");
         res.redirect("/users/sign_in");

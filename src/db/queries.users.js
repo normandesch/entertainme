@@ -1,7 +1,9 @@
+require("dotenv").config();
 const User = require("./models").User;
 const Talent = require("./models").Talent;
-const Entertainer = require("./models").Entertainer;
 const bcrypt = require("bcryptjs");
+const sgMail = require("@sendgrid/mail");
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 module.exports = {
   createUser(newUser, callback) {
@@ -35,6 +37,14 @@ module.exports = {
       image: image
     })
       .then(user => {
+        const msg = {
+          to: newUser.email,
+          from: "donotreply@example.com",
+          subject: "Account confirmation",
+          text: "Welcome to EntertainMe!",
+          html: "<strong>Please login to start creating your profile!</strong>"
+        };
+        sgMail.send(msg);
         callback(null, user);
       })
       .catch(err => {

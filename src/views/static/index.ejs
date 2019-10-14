@@ -5,36 +5,100 @@
   <% include ./partials/head.ejs %>
 </head>
 
-<body>
+<body style="background-color:#0066AD">
 
   <% include ./partials/navbar.ejs %>
 
     <main class="container">
 
-      <header class="jumbotron my-4">
-        <h1 class="display-3">Welcome to EntertainMe</h1>
-        <p class="lead">Hire a local performer for your private event today! Must be 18 or older to use EntertainMe</p>
-        <a href="/users/sign_up" class="btn btn-primary btn-lg">Sign up</a>
+      <header class="jumbotron my-5" style="background-color:#0056AD">
+        <img src="images/entertainme.png" alt="EntertainMe Logo" width=200 height=200>
+        <p class="lead">Hire a local performer for your private event today! You must be 18 or older to use EntertainMe</p>
+        <a href="/users/sign_up" class="btn btn-success btn-lg" style="float: right;">Sign up</a>
       </header>
 
       <section class="row text-center">
 
-        <section class="col-lg-4">
-          <h4 class="card-title">Tour</h4>
-          <p class="card-text">Take a peek at local talent near you without the commitment of signing up!</p>
+        <section class="column text-left">
+          <div class="column-left">
+            <img src="css/circus.jpg" alt="Photo of a clown." width=200 height=200>
+            <br>
+            <img src="css/comedy.jpg" alt="Microphone stand." width=200 height=200>
+            <br>
+            <img src="css/dance.jpg" alt="Photo of a woman dancing." width=200 height=200>
+          </div>
         </section>
 
         <section class="col-lg-4">
-          <h4 class="card-title">Reviews</h4>
-          <p class="card-text">There are plenty to read!</p>
+          <h4 class="card-title" h4 style="color:white;">Tour</h4>
+          <a href="/static/tour" href style="color:white;" class="btn btn-standard btn-lg">New Entertainers</a>
+          <p class="card-text" p style="color:white;">Take a peek at local entertainers near you without the commitment of signing up!</p>
         </section>
 
-        <section class="col-lg-4">
-          <h4 class="card-title">Disclaimer</h4>
-          <p class="card-text">Disclaimer body</p>
-        </section>
+          <div class="container">
+            <div class="card card-inner">
+              <h2>Reviews</h2>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-2">
+                    <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid" />
+                    <p class="text-secondary text-center">2 Days Ago</p>
+                  </div>
+                  <div class="col-md-10">
+                    <p>
+                      <a><strong>Marisol Esperanza</strong></a></p>
+                    <p>Floating Loli was an absolutle delight. She was like a plastic bag floating in the wind!</p>
+                    <p>
+                      <a class="float-right btn btn-outline-primary ml-2">  <i class="fa fa-reply"></i> Reply</a>
+                      <a class="float-right btn text-white btn-danger"> <i class="fa fa-heart"></i> Like</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="card card-inner">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-2">
+                        <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid" />
+                        <p class="text-secondary text-center">1 Days Ago</p>
+                      </div>
+                      <div class="col-md-10">
+                        <p>
+                          <a><strong>Floating Loli</strong></a></p>
+                        <p>Thank you for your kind words and fabulous review. Trapeeze work is somthing that I dearly pride myself in. Your event was so much fun hope to see you all again!</p>
+                        <p>
+                          <a class="float-right btn btn-outline-primary ml-2">  <i class="fa fa-reply"></i> Reply</a>
+                          <a class="float-right btn text-white btn-danger"> <i class="fa fa-heart"></i> Like</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-      </section>
+
+        <style>
+          .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #0066AD;
+            color: white;
+            font-size: 7.5px;
+            text-align: center;
+          }
+        </style>
+
+        <div class="footer">
+          If you require any more information or have any questions about our site's disclaimer, please feel free to contact us by email at deschdev@gmail.com. EntertainMe provides the entertainme.com website as a service to the public. EntertainMe is not responsible
+          for, and expressly disclaims all liability for, damages of any kind arising out of use, reference to, or reliance on any information contained within this website. While the information contained within this website is periodically updated,
+          no guarantee is given that the information provided in this website is correct, complete, and up-to-date. Although the entertainme.com may include links providing direct access to other Internet resources, including websites, EntertainMe is
+          not responsible for the accuracy or content of information contained in these sites. Links from EntertainMe to third-party sites do not constitute an endorsement by EntertainMe of the parties or their products and services. The appearance on
+          this website of advertisements and product or service information does not constitute an endorsement by EntertainMe, and EntertainMe has not investigated the claims made by any advertiser. Product information is based solely on material received
+          from suppliers.”</p>
+        </div>
 
     </main>
 
