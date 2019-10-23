@@ -9,25 +9,26 @@
 
   <% include ../static/partials/navbar.ejs %>
 
-    <main class="container">
+    <main class="container" style="color:white">
 
-      <h1>Sign up</h1>
+      <h1> Sign up</h1>
+
+      <br>
 
       <form action="/users" method="post">
 
         <div class="form-group">
-          <label for="text">First Name</label>
+          <label for="text" style="color:white">First Name</label>
           <input type="text" class="form-control" name="firstName" aria-describedby="textHelp" placeholder="Enter text">
-          <small class="text-muted" id="textHelp">please write your full legal first name</small>
+          <small class="text-dark" id="textHelp">please write your full legal first name</small>
         </div>
 
         <div class="form-group">
-          <label for="text">Last Name</label>
+          <label for="text" style="color:white">Last Name</label>
           <input type="text" class="form-control" name="lastName" aria-describedby="textHelp" placeholder="Enter text">
-          <small class="text-muted" id="textHelp">please write your full legal last name</small>
+          <small class="text-dark" id="textHelp" style="color:white">please write your full legal last name</small>
         </div>
 
-        <label for="text">Talent</label>
         <select name="talent">
             <option value="Circus">Circus</option>
             <option value="Comedy">Comedy</option>
@@ -36,38 +37,38 @@
             <option value="Magic">Magic</option>
             <option value="Music">Music</option>
           </select>
-        <small class="text-muted" id="textHelp">please choose your talent</small>
+        <small class="text-dark" id="textHelp">please choose your talent</small>
 
         <div class="form-group">
-          <label for="text">Stage Name</label>
+          <label for="text" style="color:white">Stage Name</label>
           <input type="text" class="form-control" name="stageName" aria-describedby="textHelp" placeholder="Enter text">
-          <small class="text-muted" id="textHelp">please write your full stage name</small>
+          <small class="text-dark" id="textHelp">please write your full stage name</small>
         </div>
 
         <div class="form-group">
-          <label for="text">Location</label>
+          <label for="text" style="color:white">Location</label>
           <input type="text" class="form-control" name="location" aria-describedby="textHelp" placeholder="Enter text">
-          <small class="text-muted" id="textHelp">Where abouts do you reside?</small>
+          <small class="text-dark" id="textHelp">what county and state are you from?</small>
         </div>
 
         <div class="form-group">
-          <label for="email">Email</label>
+          <label for="email" style="color:white">Email</label>
           <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Enter email">
-          <small class="text-muted" id="emailHelp">email address must be a valid address</small>
+          <small class="text-dark" id="emailHelp">email address must be a valid address</small>
         </div>
 
         <div class="form-group">
-          <label for="password">Password</label>
+          <label for="password" style="color:white">Password</label>
           <input type="password" class="form-control" name="password" aria-describedby="passwordHelp" placeholder="Enter password">
-          <small class="text-muted" id="passwordHelp">password must match confirmation below</small>
+          <small class="text-dark" id="passwordHelp">password must match confirmation below</small>
         </div>
 
         <div class="form-group">
-          <label for="passwordConfirmation">Password confirmation</label>
+          <label for="passwordConfirmation" style="color:white">Password confirmation</label>
           <input type="password" class="form-control" name="passwordConfirmation" aria-describedby="passwordHelp" placeholder="Enter password confirmation">
         </div>
 
-        <button type="submit" class="btn btn-primary ">Sign up</button>
+        <button type="submit" class="btn btn-success">Sign up</button>
       </form>
     </main>
 

@@ -10,14 +10,99 @@
   <!-- Navigation -->
   <% include ../static/partials/navbar.ejs %>
 
-    <h2>Looking for a specific performer?</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="card" style="background-color:#0056AD">
 
-    <!-- Calendly inline widget begin -->
-    <div class="calendly-inline-widget" data-url="https://calendly.com/normandesch3/booking-sirgo-the-sword-swallower" style="min-width:320px;height:630px;"></div>
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-    <!-- Calendly inline widget end -->
+            <div class="card-body">
+              <div class="card-title mb-4">
+                <div class="d-flex justify-content-start">
+                  <div class="image-container">
+                    <img src="images/sir.jpg" width=200 height=300>
+                    <div class="middle">
+                      <input type="file" style="display: none;" id="profilePicture" name="file" />
+                    </div>
+                  </div>
+                  <div class="userData ml-3">
+                    <b><h2 class="d-block" style="font-size: 1.5rem; font-weight: bold"><a href="javascript:void(0);" style="color:white">Sirgo the Sword Swallower</a></h2></b>
+                    <div class="container">
+                      <div class="row">
 
-    <% include ../static/partials/baseScripts.ejs %>
+                        <div>
+                          <img src="images/sirgo.jpg" alt="" class="img-rounded" width=150 height=250>
+                          <img src="images/sir2.jpg" alt="" class="img-rounded" width=150 height=250>
+                          <img src="images/sir3.jpg" alt="" class="img-rounded" width=150 height=250>
+                          <img src="images/sir4.jpg" alt="" class="img-rounded" width=150 height=250>
+                          <img src="images/sir5.jpg" alt="" class="img-rounded" width=150 height=250>
+                        </div>
+
+                        <div class="ml-auto">
+                          <input type="button" class="btn btn-primary d-none" id="btnDiscard" value="Discard Changes" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-12">
+                        <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active" id="basicInfo-tab" data-toggle="tab" href="#basicInfo" role="tab" aria-controls="basicInfo" aria-selected="true">Basic Info</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="connectedServices-tab" data-toggle="tab" href="#connectedServices" role="tab" aria-controls="connectedServices" aria-selected="false">Connected Services</a>
+                          </li>
+                        </ul>
+                        <div class="tab-content ml-1" id="myTabContent">
+                          <div class="tab-pane fade show active" id="basicInfo" role="tabpanel" aria-labelledby="basicInfo-tab">
+
+                            <div class="row">
+                              <div class="col-sm-3 col-md-2 col-5" style="color:white;">
+                                <label style="font-weight:bold;" style="color:white;">Stage Name</label>
+                              </div>
+                              <div class="col-md-8 col-6" style="color:white;">
+                                Sirgo the Sword Swallower
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-sm-3 col-md-2 col-5" style="color:white;">
+                                <label style="font-weight:bold;" style="color:white;">Talent</label>
+                              </div>
+                              <div class="col-md-8 col-6" style="color:white;">
+                                Circus
+                              </div>
+                            </div>
+                            <hr />
+                            <div class="row">
+                              <div class="col-sm-3 col-md-2 col-5" style="color:white;">
+                                <label style="font-weight:bold;" style="color:white;">Location</label>
+                              </div>
+                              <div class="col-md-8 col-6" style="color:white;">
+                                Habada, Arizona
+                              </div>
+                            </div>
+                            <hr />
+                            <div class="calendly-inline-widget" data-url="https://calendly.com/normandesch3/booking-sirgo-the-sword-swallower" style="min-width:320px;height:630px;"></div>
+                            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+                            <hr />
+
+                          </div>
+                          <div class="tab-pane fade" id="connectedServices" role="tabpanel" aria-labelledby="ConnectedServices-tab" style="color:white;">
+                            Facebook, Google, Twitter Account that are connected to this account
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <% include ../static/partials/baseScripts.ejs %>
 </body>
 
 </html>
